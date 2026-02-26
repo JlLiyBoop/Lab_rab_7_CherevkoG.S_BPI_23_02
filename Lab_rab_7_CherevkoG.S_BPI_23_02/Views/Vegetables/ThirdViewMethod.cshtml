@@ -1,0 +1,20 @@
+﻿@model IEnumerable<IGrouping<string, Lab_rab_7_CherevkoG.S_BPI_23_02.Models.Vegetable>>
+
+@{
+    ViewData["Title"] = "Сортировка по группам";
+}
+
+<h2>Группировка по первой букве</h2>
+
+@foreach (var group in Model)
+{
+    <div class="card mb-2">
+        <div class="card-header bg-primary text-white">Буква: @group.Key</div>
+        <ul class="list-group list-group-flush">
+            @foreach (var item in group)
+            {
+                <li class="list-group-item">@item.Name</li>
+            }
+        </ul>
+    </div>
+}

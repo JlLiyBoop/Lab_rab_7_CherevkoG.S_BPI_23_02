@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Lab_rab_7_CherevkoG.S_BPI_23_02.Models.Vegetable>
+
+@{
+    ViewData["Title"] = "Сортировка по алфавиту";
+}
+
+<h2>Овощи по алфавиту</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
